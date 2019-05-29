@@ -19,6 +19,9 @@ function validateRegistration(){
         var user = new User(email,username, password);
         listUsers.push(user);
         //alert(user.getDetails() + " size: " + listUsers.length);
+        document.getElementById("email").value = "";
+        document.getElementById("usrR").value = "";
+        document.getElementById("passwordR").value = "";
         toLoginPage();
     }else{
 
