@@ -1,0 +1,22 @@
+{
+    "name": "socket-web-chat",
+    "version": "0.0.1",
+    "description": "socket.io",
+    "dependencies": {
+        "bootstrap": "^4.3.1",
+        "express": "^4.17.0",
+        "express-handlebars": "*",
+        "express-messages": "*",
+        "express-session": "*",
+        "express-validator": "*",
+        "handlebars": "^4.1.2",
+        "lokijs": "^1.5.6",
+        "mongodb": "*",
+        "mongoose": "*",
+        "passport": "^0.4.0",
+        "passport-http": "*",
+        "passport-local": "^1.0.0",
+        "save": "^2.4.0",
+        "socket.io": "^2.2.0"
+    }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta charset="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="/css/style.css">
+    <title>title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  </head>
+  <body>
+      <div id="regId" class="container-fluid">
+        <!--------------------------------Registration-------------------------------------->
+        <form id="form_id_reg" method="post" name="myform">
+          <label>Email :</label>
+          <input type="text" value="" name="email" id="email"/>
+          <label>User Name :</label>
+          <input type="text" value="" name="username" id="usrR"/>
+          <label>Password :</label>
+          <input type="password" value="" name="password" id="passwordR"/>
+          <input type="button" value="Register" id="submitR" onclick="validateRegistration()"/>
+        </form>
+
+        <input type="button" id="toLogB"value="Already registered?" onclick="toLoginPage()"/>
+        <!---------------------------------------------------------------------------------->
+      </div>
+      <div id="logId" class="container-fluid" style="display: none">
+        <!--------------------------------Login--------------------------------------------->
+        <form id="form_id_log" method="post" name="myform">
+            <label>User Name :</label>
+            <input type="text" value="" name="username" id="usrL"/>
+            <label>Password :</label>
+            <input type="password" value="" name="password" id="passwordL"/>
+            <input type="button" value="Login" id="submitL" onclick="validateLogin()"/>
+        </form>
+        <!---------------------------------------------------------------------------------->
+        <input type="button" id="toRegB" value="Don't have an account?" onclick="toRegPage()"/>
+        <!---------------------------------------------------------------------------------->
+      </div>
+          
+      <div class="container">
+          <h1 class="display-4">Chatroom</h1>
+      </div>
+          <!------------------------------- Shows Messages------------------------------------>
+          <div class="message-container" style="right:35px;left:35px;margin-top: 2%">
+            <ul id="messages" style="list-style-type: none"></ul>
+          </div>
+          
+        <!---------------------------------------------------------------------------------->
+    
+        <!--------------------------------Input Message------------------------------------->
+        <div class="fixed-bottom">
+            <div class="container-fluid" id="input-meessage1">
+                <form action="">
+                        <div class="input-group mb-3">
+                                <input type="text" placeholder="Log in to join the Chatroom!"class="form-control" id="m" autocomplete="off" disabled/>
+                                <div class="input-group-append">
+                                    <button class="input-group-text">Send</button>
+                                </div>
+                            </div>
+                </form>
+            </div>
+        </div>
+        <!---------------------------------------------------------------------------------->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="/js/myScript.js"></script>
+    <script src="/js/login.js"></script>
+    
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
